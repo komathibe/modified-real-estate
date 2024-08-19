@@ -1,0 +1,771 @@
+body {
+     
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .app-container {
+    padding: 20px;
+  }
+  
+  .property-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  .property-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .property-form input,
+  .property-form textarea,
+  .user-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  .property-form button,
+  .user-form button,
+  .login-form button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .property-form button:hover,
+  .user-form button:hover,
+  .login-form button:hover {
+    background-color: #555;
+  }
+  
+  .user-management ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-management li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+  }
+  
+  .user-form div {
+    margin-bottom: 10px;
+  }
+  
+  .login-form a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
+  .property-form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .property-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .property-form input,
+  .property-form textarea {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .property-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .property-form button:hover {
+    background-color: #0056b3;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .login-form input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .login-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .forgot-password-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  /* ............................................................................ */
+  .forgot-password-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forgot-password-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-password-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .forgot-password-form input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .forgot-password-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .forgot-password-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .forgot-password-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .message {
+    margin-top: 15px;
+    text-align: center;
+    color: red;
+  }
+
+  .user-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  fieldset label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .user-management {
+    padding: 20px;
+  }
+  
+  .user-form {
+    margin-bottom: 20px;
+  }
+  
+  .user-form h3 {
+    margin-bottom: 15px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  fieldset label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .user-table td {
+    text-align: center;
+  }
+  
+  .user-table .delBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .user-table .delBtn:hover {
+    background-color: #c82333;
+  }
+  
+  .reset-button {
+    background-color: #6c757d;
+    margin-top: 10px;
+  }
+  
+  .reset-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .user-table button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .user-table button:hover {
+    background-color: #0056b3;
+  }
+  
+  .property-management {
+    padding: 20px;
+  }
+  
+  .property-form {
+    margin-bottom: 20px;
+  }
+  
+  .property-form h3 {
+    margin-bottom: 15px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 15px;
+  }
+  
+  fieldset legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  fieldset label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .reset-button {
+    background-color: #6c757d;
+    margin-top: 10px;
+  }
+  
+  .reset-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .property-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .property-table th, .property-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .property-table th {
+    background-color: #f4f4f4;
+  }
+  
+  .property-table td {
+    text-align: center;
+  }
+  
+  .property-table .delBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .property-table .delBtn:hover {
+    background-color: #c82333;
+  }
+
+  .property-table button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .property-table button:hover {
+    background-color:green;
+  }
+  
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  .search-add {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .search-bar {
+    margin: 8px;
+    padding: 7px;
+    align-items: center;
+    color: black;
+  }
+  
+  .property-table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  .property-table th,
+  .property-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .property-form .input-group {
+    margin-bottom: 10px;
+    
+  }
+  
+  .reset-button {
+    margin-left: 10px;
+    
+    
+  }
+
+
+  /* styles.css */
+
+.user-management1 {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar1 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.search-bar1 input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.search-bar1 button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar1 button:hover {
+  background-color: #218838;
+}
+
+.user-form1 {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-form1 h3 {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+fieldset {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.reset-button1 {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.reset-button1:hover {
+  background-color: #5a6268;
+}
+
+.user-table1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table1 th,
+.user-table1 td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-table1 th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.user-table1 td button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-table1 td button:hover {
+  background-color: #0056b3;
+}
+
+.delBtn1 {
+  background-color:red;
+  margin:2px;
+  
+}
+
+.delBtn1:hover {
+  background-color: blue;
+}
